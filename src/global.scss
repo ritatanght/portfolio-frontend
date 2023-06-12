@@ -1,0 +1,99 @@
+@import "animate.css";
+
+@font-face {
+  font-family: FFFTusj;
+  src: url(./assets/fonts/FFF_Tusj.ttf);
+}
+
+@font-face {
+  font-family: Digital7;
+  src: url(./assets/fonts/Digital7Mono.ttf);
+}
+
+@font-face {
+  font-family: "Return To Sender";
+  src: url(./assets/fonts/Return_To_Sender.ttf);
+}
+
+/* =============
+  Variables
+================ */
+
+$clr-dark: #333;
+$clr-chalk: rgba(238, 238, 238, 0.7);
+$clr-white: #fff;
+$clr-chalk-green: #b5eeb9;
+$clr-chalk-blue: #addfee;
+$clr-chalk-red: #ffa3a3;
+$clr-chalk-orange: #fbcea0;
+$clr-chalk-purple: #d2afea;
+$clr-shadow: rgba(0, 0, 0, 0.4);
+$std-transition: 0.4s all ease-in-out;
+$colors: $clr-chalk-red, $clr-chalk-orange, $clr-chalk-green, $clr-chalk-blue,
+  $clr-chalk-purple;
+
+@mixin flex($justify: flex-start, $align: normal) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+/* =============
+  Global Styles
+================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+  background: rgb(136, 148, 168);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.icon-btn {
+  background: none;
+  border: 0;
+  font-size: 2rem;
+  cursor: pointer;
+  @include flex(center, center);
+}
+
+/* ===========
+ Custom scrollbar
+===========  */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $clr-shadow;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $clr-dark;
+  box-shadow: inset 0 0 5px $clr-chalk;
+}

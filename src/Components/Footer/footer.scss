@@ -1,0 +1,159 @@
+@import "../../global";
+
+/* ========
+  Footer  
+==========*/
+
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  background: $clr-chalk-blue;
+  width: 100%;
+  > p {
+    padding-block: 5px;
+    background: $clr-chalk-blue;
+    width: 100%;
+  }
+}
+
+/* =============
+  Menu component 
+===============*/
+
+.overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  inset: 0;
+}
+
+.footer-menu {
+  font-family: "Nanum Pen Script", cursive;
+  max-width: 370px;
+  padding: 0em 1em 1.5em;
+  border: 1px solid grey;
+  box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+  background: #fffef0;
+  font-size: 2rem;
+  transform: scale(0.4) rotate(3deg);
+  position: absolute;
+  cursor: pointer;
+  bottom: -800%;
+  right: -5%;
+  transition: all 0.5s ease-in-out;
+  display: none;
+  z-index: -1;
+  .footer-menu__top {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include flex(space-between, center);
+    padding: 10px;
+    a {
+      position: relative;
+      &::before {
+        content: "";
+        height: 40px;
+        width: 40px;
+        border: 50%;
+        transform: translateX(0px);
+      }
+    }
+  }
+
+  &:hover {
+    transform: scale(0.4) rotate(3deg) translateY(-10px);
+  }
+
+  &.full-menu {
+    transform: scale(1) rotate(0deg) translate(-20%, -60%);
+    padding-top: 1em;
+    cursor: auto;
+    z-index: 5;
+
+    .footer-menu__top {
+      opacity: 1;
+      .icon-btn {
+        &:hover {
+          color: grey;
+        }
+        &:active {
+          border: 1px solid;
+          border-radius: 30%;
+        }
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+    border-bottom: 3px dashed;
+    text-transform: uppercase;
+    font-family: "Nanum Pen Script", cursive;
+    font-size: 6rem;
+  }
+  h3 {
+    font-weight: 400;
+    text-decoration: underline;
+    margin-top: 0.5em;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    &.active {
+      cursor: auto;
+    }
+    &.active::after {
+      content: "";
+      position: absolute;
+      background: grey;
+      width: 100%;
+      height: 3px;
+      bottom: 50%;
+      border-radius: 20px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      height: 30px;
+      width: 110px;
+      border-radius: 45% 50%;
+      border: 2px solid;
+      transform: translateX(-10px) rotate(-5deg);
+      color: grey;
+      clip-path: circle(0% at 1%);
+    }
+    &:not(.active):hover {
+      color: grey;
+
+      &::before {
+        animation: 0.5s circleMenu ease-in-out forwards;
+      }
+    }
+  }
+  .menu-item {
+    @include flex(space-between);
+    transition: 0.5s ease-in;
+  }
+}
+
+@keyframes circleMenu {
+  from {
+    clip-path: circle(0% at 1%);
+  }
+  to {
+    clip-path: circle(100%);
+  }
+}
+
+@media (max-width: 720px) {
+  .footer-menu {
+    display: inline-block;
+  }
+  footer {
+    width: 100%;
+  }
+}
