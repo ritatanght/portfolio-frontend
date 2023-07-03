@@ -36,15 +36,20 @@ const Home = () => {
         {visited ? (
           <div className="shadow-text" ref={textonShadow}></div>
         ) : (
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter
-                .typeString(text)
-                .callFunction(() => setVisited(checkVisited(true)))
-                .start();
-            }}
-            options={options}
-          />
+          <>
+            <button className="skip-btn" onClick={() => setVisited(true)}>
+              Skip
+            </button>
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString(text)
+                  .callFunction(() => setVisited(checkVisited(true)))
+                  .start();
+              }}
+              options={options}
+            />
+          </>
         )}
 
         <img

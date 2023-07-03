@@ -8,12 +8,18 @@ import {
   DiReact,
 } from "react-icons/di";
 import { TbDatabase } from "react-icons/tb";
-import { SiTypescript, SiExpress, SiMongodb } from "react-icons/si";
+import {
+  SiTypescript,
+  SiExpress,
+  SiMongodb,
+  SiTailwindcss,
+} from "react-icons/si";
 
 export const tools = [
   { label: "HTML5", icon: <DiHtml5 />, color: "#e96228" },
   { label: "CSS3", icon: <DiCss3 />, color: "#3a97d0" },
   { label: "Sass", icon: <DiSass />, color: "#c76494" },
+  { label: "Tailwind CSS", icon: <SiTailwindcss />, color: "#07b0ce" },
   { label: "JavaScript", icon: <DiJsBadge />, color: "#f7df1e" },
   { label: "React", icon: <DiReact />, color: "#61dbfb" },
   { label: "SQL", icon: <TbDatabase />, color: "#e6792f" },
@@ -36,7 +42,7 @@ export const traits = [
   "Dependable",
   "Frugal",
   "Low-profile",
-  "Co-op gamer",
+  "Co-op Gamer",
   "DIYer",
-  "Animal lover",
+  "Animal Lover",
 ];
