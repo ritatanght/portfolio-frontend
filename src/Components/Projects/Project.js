@@ -49,14 +49,16 @@ const Project = ({
               </button>
             </>
           ) : (
-            <a
-              className="link-btn"
-              href={liveURL}
-              target="_blank"
-              rel="noreferrer"
-            >
-              View Demo
-            </a>
+            liveURL && (
+              <a
+                className="link-btn"
+                href={liveURL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Demo
+              </a>
+            )
           )}
 
           <a
