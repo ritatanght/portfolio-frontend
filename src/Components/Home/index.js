@@ -21,7 +21,7 @@ const Home = () => {
     delay: 50,
   };
   const text =
-    "<h1><span>Hi there! I'm</span><span>Rita Tang, a</span><span>web developer</span><span>based in</span><span>Canada.</span></h1><p><span>I like creating fun and</span><span>interactive elements that</span><span>make websites come alive.</span><span>Explore my portfolio to see</span><span>how I combine my technical</span><span>skills and creativity to build</span><span>unique and enjoyable</span><span>online experiences.</span></p>";
+    "<h1><span>Hi there! I'm</span><span>Rita Tang, a</span><span>full stack</span><span>developer</span><span>based in<span><span>Markham, ON.</span></h1><p><span>I like turning innovative ideas</span><span>to life and creating apps</span><span>that simplify everyone's life.</span><span>Explore my portfolio to see</span><span>how I combine my technical</span><span>skills and creativity to build</span><span>unique and enjoyable</span><span>online experiences.</span></p>";
 
   useEffect(() => {
     if (textonShadow.current) {
@@ -144,7 +144,7 @@ const Home = () => {
                   </button>
                 )}
                 <h2>Rita Tang</h2>
-                <h3>Web Developer</h3>
+                <h3>Full Stack Developer</h3>
                 <ul className="card__status">
                   <li>Looking for an Employer</li>
                   <li>Markham. ON. Canada</li>
