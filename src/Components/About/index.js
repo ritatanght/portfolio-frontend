@@ -6,7 +6,7 @@ const About = () => {
     <li
       className="icon"
       key={tool.label === "Python" ? `Python_${ind}` : tool.label}
-      title={tool.label}
+      data-title={tool.label}
       style={{ color: tool.color }}
       aria-label={tool.label}
       aria-hidden={tool.label === "Python" && tool.color === "#ffde57"}
