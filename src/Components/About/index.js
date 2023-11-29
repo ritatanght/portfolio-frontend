@@ -1,5 +1,5 @@
-import "./about.scss";import { traits, tools, photos } from "../../data";
-
+import "./about.scss";
+import { traits, tools, photos } from "../../data";
 const About = () => {
   const traitsElement = traits.map((trait) => <li key={trait}>{trait}</li>);
   const toolsElement = tools.map((tool, ind) => (
@@ -33,14 +33,13 @@ const About = () => {
         </div>
         <div className="content__paragraphs-container">
           <p>
-            Thanks for taking the time to learn a little bit about me! I
-            graduated from the University of Toronto and have a background as a
-            risk and compliance assistant manager in the banking industry, where
-            I developed my skills in analytical thinking, attention to detail,
-            and problem-solving. After moving back to Canada due to some family
-            circumstances, I decided to pursue a new career in technology. I'm
-            thrilled by the endless possibilities that coding and web
-            development offer, and I enjoy bringing ideas to life through code.
+            Hello! I recently graduated from the Lighthouse Labs Web Development
+            Bootcamp and have a background in the banking industry, where I
+            developed my skills in analytical thinking, attention to detail, and
+            problem-solving. I'm thrilled by the endless possibilities that
+            coding and web development offer. Crafting code that brings ideas to
+            life, solving problems, and enhancing our daily lives is what I find
+            extremely rewarding.
           </p>
           <p>
             Aside from coding, I'm a foodie and coffee enthusiast, always
