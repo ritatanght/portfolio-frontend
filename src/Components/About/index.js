@@ -1,6 +1,4 @@
-import "./about.scss";
-import photo from "../../assets/images/profile_pic.jpg";
-import { traits, tools } from "../../data";
+import "./about.scss";import { traits, tools, photos } from "../../data";
 
 const About = () => {
   const traitsElement = traits.map((trait) => <li key={trait}>{trait}</li>);
@@ -16,6 +14,8 @@ const About = () => {
       {tool.icon}
     </li>
   ));
+  // randomly show one of two photos
+  const photosSrc = Math.random() < 0.5 ? photos[0] : photos[1];
   return (
     <section className="about-page">
       <h2 className="text-center">About Me</h2>
@@ -26,12 +26,10 @@ const About = () => {
           <h3 className="heading">Location</h3>
           <span>Markham, Ontario, Canada</span>
           <h3 className="heading">Language</h3>
-          <span>
-            English, Chinese (Cantonese & Mandarin), Japanese (a little)
-          </span>
+          <span>English, Chinese (Cantonese & Mandarin)</span>
         </div>
         <div className="photo-container">
-          <img className="photo" src={photo} alt="Rita Tang smiling" />
+          <img className="photo" src={photosSrc} alt="Rita Tang smiling" />
         </div>
         <div className="content__paragraphs-container">
           <p>
